@@ -1,0 +1,22 @@
+[toolchain]
+package_manager = "yarn"
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+voting = "6syhm79wjveGFoAfhyH2YGYfzSJjPGknkuX4sXG6skvt"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn mocha -r ts-node/register -t 1000000 anchor/tests/voting.ts"
+
+
+
